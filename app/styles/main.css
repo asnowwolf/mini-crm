@@ -96,3 +96,17 @@ body {
 .layout-footer {
 
 }
+
+.toolbar {
+  margin: 0 0 20px 0;
+
+}
+
+.table + .pagination-sm {
+  margin-top: 0
+}
+
+.table input[type=checkbox] {
+  width: 1.2em;
+  height: 1.2em;
+}

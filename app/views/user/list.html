@@ -1,3 +1,7 @@
+<div class="toolbar">
+  <span class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> 新增</span>
+  <span class="btn btn-default"><i class="glyphicon glyphicon-refresh"></i> 刷新</span>
+</div>
 <table class="table table-hover table-bordered">
   <colgroup>
     <col class="col-id"/>
@@ -8,6 +12,7 @@
     <col class="col-introducer"/>
     <col class="col-timeJoined"/>
     <col class="col-note"/>
+    <col class="col-actions"/>
   </colgroup>
   <thead>
   <tr>
@@ -19,23 +24,27 @@
     <th>介绍人</th>
     <th>加入时间</th>
     <th>备注</th>
+    <th>操作</th>
   </tr>
   </thead>
   <tbody>
   <tr>
-
+    <td colspan="9">
+      <label>过滤：</label>
+    </td>
   </tr>
   <tr ng-repeat="user in vm.users|orderBy:vm.sort.field:vm.sort.direct|page:vm.page.index-1:vm.page.size">
-    <td>{{user.id}}</td>
+    <td><label>{{user.id}}</label></td>
     <td>{{user.nickname}}</td>
     <td>{{user.gender|gender}}</td>
-    <td>{{user.username}}</td>
+    <td>{{user.users|join:username}}</td>
     <td>{{user.role|role}}</td>
     <td>{{user.introducer}}</td>
     <td>{{user.timeJoined|toDate|date}}</td>
     <td>{{user.note}}</td>
+    <td></td>
   </tr>
   </tbody>
 </table>
-<pagination total-items="vm.users.length" max-size="5" page="vm.page.index" items-per-page="vm.page.size" class="pagination-sm"
+<pagination total-items="vm.users.length" max-size="5" page="vm.page.index" items-per-page="vm.page.size" class="pagination-sm pull-right"
             boundary-links="true"></pagination>
