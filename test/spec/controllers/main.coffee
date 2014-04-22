@@ -3,7 +3,7 @@
 describe 'Controller: MainCtrl', ->
 
   # load the controller's module
-  beforeEach module 'appApp'
+  beforeEach module 'app'
 
   MainCtrl = {}
   scope = {}

@@ -2,7 +2,5 @@
 
 module = angular.module('app')
 
-module.factory 'DaoUser', ($mongolabResourceHttp, UserResource) ->
-  class DaoUser extends BaseDao
-    resource: UserResource
-  return DaoUser
+module.factory 'DaoUser', ($mongolabResourceHttp) ->
+  return $mongolabResourceHttp('users')

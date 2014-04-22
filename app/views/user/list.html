@@ -1,0 +1,41 @@
+<table class="table table-hover table-bordered">
+  <colgroup>
+    <col class="col-id"/>
+    <col class="col-nickname"/>
+    <col class="col-gender"/>
+    <col class="col-username"/>
+    <col class="col-role"/>
+    <col class="col-introducer"/>
+    <col class="col-timeJoined"/>
+    <col class="col-note"/>
+  </colgroup>
+  <thead>
+  <tr>
+    <th>编号</th>
+    <th>姓名</th>
+    <th>性别</th>
+    <th>用户名</th>
+    <th>角色</th>
+    <th>介绍人</th>
+    <th>加入时间</th>
+    <th>备注</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+
+  </tr>
+  <tr ng-repeat="user in vm.users|orderBy:vm.sort.field:vm.sort.direct|page:vm.page.index-1:vm.page.size">
+    <td>{{user.id}}</td>
+    <td>{{user.nickname}}</td>
+    <td>{{user.gender|gender}}</td>
+    <td>{{user.username}}</td>
+    <td>{{user.role|role}}</td>
+    <td>{{user.introducer}}</td>
+    <td>{{user.timeJoined|toDate|date}}</td>
+    <td>{{user.note}}</td>
+  </tr>
+  </tbody>
+</table>
+<pagination total-items="vm.users.length" max-size="5" page="vm.page.index" items-per-page="vm.page.size" class="pagination-sm"
+            boundary-links="true"></pagination>

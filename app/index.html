@@ -22,15 +22,21 @@
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 </head>
-<body ng-app="appApp">
+<body ng-app="app">
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
   your browser</a> to improve your experience.</p>
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<div class="container" ng-view=""></div>
-
+<div class="container">
+  <app-header class="layout-header"></app-header>
+  <div class="row">
+    <app-nav class="layout-nav col-md-2"></app-nav>
+    <div ui-view class="layout-content col-md-10"></div>
+  </div>
+  <app-footer class="layout-footer"></app-footer>
+</div>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 <script>
   (function (i, s, o, g, r, a, m) {
@@ -62,14 +68,41 @@
 <script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-cookies/angular-cookies.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="bower_components/momentjs/moment.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
 <script src="lib/mongolabResourceHttp.js"></script>
-<script src="scripts/controllers/home.js"></script>
+<script src="lib/angular-locale_zh-cn.js"></script>
+<script src="scripts/services/ui-bootstrap-locale_zh-cn.js"></script>
+<script src="scripts/services/DaoUser.js"></script>
+<script src="scripts/services/DaoOrderForm.js"></script>
+<script src="scripts/services/DaoPriceLine.js"></script>
+<script src="scripts/services/DaoRegion.js"></script>
+<script src="scripts/services/DaoRole.js"></script>
+<script src="scripts/services/EnumGender.js"></script>
+<script src="scripts/services/EnumRole.js"></script>
+<script src="scripts/controllers/Home.js"></script>
+<script src="scripts/controllers/User.js"></script>
+<script src="scripts/controllers/OrderForm.js"></script>
+<script src="scripts/controllers/PriceLine.js"></script>
+<script src="scripts/controllers/Region.js"></script>
+<script src="scripts/controllers/Role.js"></script>
+<script src="scripts/directives/AppHeader.js"></script>
+<script src="scripts/directives/AppFooter.js"></script>
+<script src="scripts/directives/AppNav.js"></script>
+<script src="scripts/filters/gender.js"></script>
+<script src="scripts/filters/role.js"></script>
+<script src="scripts/filters/default.js"></script>
+<script src="scripts/filters/page.js"></script>
+<script src="scripts/filters/percent.js"></script>
+<script src="scripts/filters/toDate.js"></script>
 <!-- endbuild -->
 </body>
 </html>

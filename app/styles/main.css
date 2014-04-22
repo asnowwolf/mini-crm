@@ -77,3 +77,22 @@ body {
     border-bottom: 0;
   }
 }
+
+.layout-header {
+
+}
+.layout-content {
+  min-height: 30em;
+}
+
+.layout-nav {
+  min-height: 20em;
+  width: 16em;
+  border-right: 1px solid #eee;
+}
+.layout-nav ul>li>ul>li>a {
+  font-size: 14px;
+}
+.layout-footer {
+
+}
