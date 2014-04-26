@@ -1,6 +1,6 @@
 'use strict'
 _module = angular.module('app')
-_module.filter "page", ->
+_module.filter "paging", ->
   (items, pageIndex, pageSize) ->
     return if not items
     if pageIndex < 0 or pageSize < 0

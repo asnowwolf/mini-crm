@@ -33,7 +33,7 @@
       <label>过滤：</label>
     </td>
   </tr>
-  <tr ng-repeat="user in vm.users|orderBy:vm.sort.field:vm.sort.direct|page:vm.page.index-1:vm.page.size">
+  <tr ng-repeat="user in vm.users|orderBy:vm.sort.field:vm.sort.direct|paging:vm.page.index-1:vm.page.size">
     <td><label>{{user.id}}</label></td>
     <td>{{user.nickname}}</td>
     <td>{{user.gender|gender}}</td>
