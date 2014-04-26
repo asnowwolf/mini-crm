@@ -1,6 +1,8 @@
 mini-crm
 ========
 
+** 注意：现阶段主工作代码在develop分支下 **
+
 演示程序：Angular+MongoLab。
 
 静态程序部分可以发布在github.io，服务端则直接使用mongolab。
