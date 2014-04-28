@@ -7,20 +7,20 @@ _module.controller 'UserCtrl', UserCtrl
 
 class UserListCtrl
   constructor: (DaoUser) ->
-    @users = [
-      {
-
-      }
-    ]
-    @sort = {
-      field: 'id'
-      direct: 1
-    }
+    items = []
+    for i in [0..100]
+      items.push
+        id: i+1
+        nickname: "test#{i}"
+    @items = items
     @page = {
       index: 1
       size: 10
     }
-
+    @sort = {
+      field: 'id'
+      reverse: yes
+    }
 _module.controller 'UserListCtrl', ['DaoUser', UserListCtrl]
 
 class UserMapCtrl
