@@ -6,7 +6,6 @@ _module = angular.module('app', [
   'ngSanitize'
   'ui.router'
   'ui.bootstrap'
-  'mongolabResourceHttp'
 ])
 
 _module.constant('MONGOLAB_CONFIG',{API_KEY:'4f847ad3e4b08a2eed5f3b54', DB_NAME:'angularjs'})
