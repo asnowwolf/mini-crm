@@ -2,5 +2,6 @@
 
 module = angular.module('app')
 
-module.factory 'DaoRegion', ($mongolabResourceHttp) ->
-  return $mongolabResourceHttp('regions')
+module.factory 'DaoRegion', (MongoResource) ->
+  class DaoRegion extends MongoResource
+    name: 'regions'

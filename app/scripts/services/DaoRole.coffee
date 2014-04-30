@@ -2,5 +2,6 @@
 
 module = angular.module('app')
 
-module.factory 'DaoRole', ($mongolabResourceHttp) ->
-  return $mongolabResourceHttp('roles')
+module.factory 'DaoRole', (MongoResource) ->
+  class DaoRole extends MongoResource
+    name: 'roles'

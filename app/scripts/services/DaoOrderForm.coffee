@@ -2,5 +2,6 @@
 
 module = angular.module('app')
 
-module.factory 'DaoOrderForm', ($mongolabResourceHttp) ->
-  return $mongolabResourceHttp('orderForms')
+module.factory 'DaoOrderForm', (MongoResource) ->
+  class DaoOrderForm extends MongoResource
+    name: 'orderForms'

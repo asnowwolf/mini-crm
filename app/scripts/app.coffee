@@ -8,8 +8,6 @@ _module = angular.module('app', [
   'ui.bootstrap'
 ])
 
-_module.constant('MONGOLAB_CONFIG',{API_KEY:'4f847ad3e4b08a2eed5f3b54', DB_NAME:'angularjs'})
-
 _module.config ($stateProvider, $urlRouterProvider) ->
   $stateProvider.state 'home',
     url: '/'
